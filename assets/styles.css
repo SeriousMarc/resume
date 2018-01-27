@@ -1,6 +1,6 @@
 /* learn more about css3 - media-responsible */
 
-/* default styling */
+/* base layout styling */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +14,89 @@ html {
   background-size: cover;
 }
 
-h1, h2, h3{
+h1, h2, h3 {
   text-align: center;
   font-family: Arial, sans-serif;
+  margin: auto;
+}
+
+body {
+  display: grid;
+  grid-template-columns: minmax(760px, auto);
+  grid-template-rows: 80px minmax(500px, auto) 80px;
+  grid-gap: 50px;
+  margin-top: 70px;
+  color: white;
+
+}
+
+header, main, footer {
+  display: grid;
+  background: rgba(0,0,0, 0.2);
+}
+
+header, footer{
+  grid-template-columns: 1fr 1fr;
+}
+
+header .main-nav {
+  justify-self: end;
+  margin: auto;
+}
+
+header .main-nav li {
+  display: inline-block;
+  left: 10px;
+  padding: 10px;
+}
+
+header .main-nav li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+header .main-nav li a:hover {
+  color: gold;
+  text-shadow: 0px 11px rgba(255,255,255, 0.3)
+}
+
+main {
+  min-width: 760px;
+  min-height: 100%;
+  margin: auto;
+}
+
+footer .footer-creator{
+  justify-self: center;
+  margin: auto;
+}
+
+footer .footer-creator li {
+  display: inline-block;
+  left: 10px;
+  padding: 10px;
+}
+
+footer .footer-creator li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .footer-nav {
+  justify-self: end;
+  margin: auto 0;
+}
+
+footer .footer-nav li {
+  display: inline-block;
+  position: relative;
+  right: 50px;
+  padding: 10px;
+}
+
+footer .footer-nav li a {
+  text-decoration: none;
+  color: white;
 }
