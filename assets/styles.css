@@ -18,7 +18,12 @@ h1, h2, h3 {
   text-align: center;
   font-family: Arial, sans-serif;
   margin: auto;
+  text-transform: uppercase;
 }
+
+h1 {font-size: 1.8em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1em;}
 
 body {
   display: grid;
@@ -68,7 +73,7 @@ header .main-nav li a:hover {
 }
 
 main {
-  min-width: 760px;
+  width: 760px;
   min-height: 100%;
   margin: auto;
 }
@@ -114,4 +119,61 @@ body .content .homepage-content {
 hr.style2, .style1 {
 	border-top: 2px double gold;
 	margin: 20px 0;
+}
+
+/* skills styling */
+.skills-content {
+  margin: auto;
+}
+.skills-content .skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+
+}
+
+.skills-content .skills .skill {
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 10px;
+  background: rgba(0,0,0, 0.4);
+}
+
+.skills-content .skills .skill img{
+  height: 70px;
+}
+
+.skills-content .skills .skill img, h2, p{
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.skills-content h1 {
+  font-size: 2em;
+  padding-bottom: 30px
+}
+
+/* experience styling */
+.experience-content {
+  margin: auto;
+}
+
+.experience-content .activities {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 50px;
+}
+
+.experience-content .activities .activity {
+
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 10px;
+  background: rgba(0,0,0, 0.4);
+}
+
+
+.experience-content h1{
+  padding-bottom: 20px
 }
