@@ -19,3 +19,150 @@ h1, h2, h3{
 }
 
 /* content styling: header(nav), main, footer*/
+body{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  margin: 50px 0 auto;
+  color: white;
+}
+
+/* header/nav */
+header{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.main-nav{
+  justify-self: end;
+  margin: auto;
+}
+
+.main-nav li{
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.main-nav li a{
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+
+/* Circle */
+.main-nav ul li a:hover{
+  color: #e6ecb8;
+}
+.main-nav ul li a{
+  position: relative;
+}
+.main-nav ul li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+.main-nav ul li a:hover:after {
+  width: 100%;
+}
+
+/* main */
+main{
+  display: grid;
+  background: rgba(60, 50, 60, 0.3);
+  width: 80%;
+  min-height: 500px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* footer */
+footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: rgba(0, 0, 0, 0.6);
+  height: 70px;
+}
+
+footer ul{
+  justify-self: end;
+}
+
+footer ul li{
+/*   display: inline-block; */
+}
+
+/* skills content styling */
+/* 1. learn how to margin grid sections */
+/* 2. learn how to minmax and make fixed size of sections */
+/* 3. learn how to make responsive in-face */
+.skills{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.skill{
+  padding: 10px;
+  border: 1px solid #00dba0;
+}
+
+.skill img{
+  height: 70px;
+}
+
+.skill img, h2, p{
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+/* experience content styling */
+.content-contact{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.activities{
+  display: grid;
+  grid-gap: 30px;
+
+}
+
+.activity{
+  border: 1px solid #b0db00;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.site-form {
+    margin-top: 60px;
+    border: 1px solid #b0db00;
+    padding: 20px;
+}
+
+.site-form input, .site-form textarea{
+    display: block;
+    margin: 20px 0 0px 0;
+    padding: 10px;
+}
+
+.site-form button[type="submit"]{
+    background: #000000;
+    opacity: 0.7;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 5px;
+}
