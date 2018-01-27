@@ -1,6 +1,6 @@
 /* learn more about css3 - media-responsible */
 
-/* base layout styling */
+/* base_layout styling */
 * {
   margin: 0;
   padding: 0;
@@ -27,12 +27,17 @@ body {
   grid-gap: 50px;
   margin-top: 70px;
   color: white;
-
 }
 
-header, main, footer {
+body .content {
   display: grid;
-  background: rgba(0,0,0, 0.2);
+  grid-template-rows: minmax(500px, auto);
+  justify-self: center;
+}
+
+header, footer {
+  display: grid;
+  background: rgba(0,0,0, 0.5);
 }
 
 header, footer{
@@ -59,7 +64,7 @@ header .main-nav li a {
 
 header .main-nav li a:hover {
   color: gold;
-  text-shadow: 0px 11px rgba(255,255,255, 0.3)
+  text-shadow: 0px 11px rgba(255,255,255, 0.3);
 }
 
 main {
@@ -99,4 +104,14 @@ footer .footer-nav li {
 footer .footer-nav li a {
   text-decoration: none;
   color: white;
+}
+
+/* homepage styling */
+body .content .homepage-content {
+  margin: auto;
+}
+
+hr.style2, .style1 {
+	border-top: 2px double gold;
+	margin: 20px 0;
 }
