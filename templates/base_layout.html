@@ -1,0 +1,36 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  </head>
+  <body>
+    <header>
+      <h1>Test this my first project</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'skills:skills_home' %}">Skills</a></li>
+          <li><a href="{% url 'experience:experience_home' %}">Experience</a></li>
+          <li><a href="{% url 'portfolio:portfolio_home' %}">Portfolio</a></li>
+          <li><a href="{% url 'contact:contact_home' %}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </main>
+    <footer>
+      <p>Created by</p>
+      <ul>
+        <li><a href="#"><img src="" alt="" /></a></li>
+        <li><a href="#"><img src="" alt="" /></a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

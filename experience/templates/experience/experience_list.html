@@ -1,0 +1,15 @@
+{% extends 'base_layout.html'%}
+{% block content %}
+  <div class="content-experience">
+    <h1>my Experience</h1>
+    <div class="activities">
+      {% for activity in activities %}
+      <div class="activity">
+        <h2>{{activity.work_place}}</h2>
+        <p>{{activity.description}}</p>
+        <p>{{activity.period_from}} - {{activity.period_to}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

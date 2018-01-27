@@ -1,0 +1,21 @@
+/* learn more about css3 - media-responsible */
+
+/* default styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: url(bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1, h2, h3{
+  text-align: center;
+}
+
+/* content styling: header(nav), main, footer*/

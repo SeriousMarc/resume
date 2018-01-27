@@ -1,0 +1,13 @@
+{% extends 'base_layout.html'%}
+{% block content %}
+    <h1>skills</h1>
+    <div class="skills">
+      {% for skill in skills %}
+        <div class="skill">
+          <h2>{{skill.title}}</h2>
+          <img src="{{skill.thumb.url}}"/>
+          <p>{{skill.level}}</p>
+        </div>
+      {% endfor %}
+    </div>
+{% endblock %}

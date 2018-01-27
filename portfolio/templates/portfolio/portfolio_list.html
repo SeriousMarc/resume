@@ -1,0 +1,15 @@
+{% extends 'base_layout.html'%}
+{% block content %}
+    <h1>Portfolio</h1>
+    <div class="portfolio-content">
+      <div class="projects">
+        {% for project in projects %}
+        <div class="project">
+          <img src="{{project.img.url}}" />
+          <p>{{project.url_name}}</p>
+          <p>{{project.description}}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+{% endblock %}
