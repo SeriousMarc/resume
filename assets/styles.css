@@ -205,6 +205,7 @@ hr.style2, .style1 {
 .contact-content .contact-top-block {
   background: url(bg.jpg);
   background-size: cover;
+  border-radius: 5px;
 }
 
 .contact-content .contact-bot-block {
@@ -212,6 +213,7 @@ hr.style2, .style1 {
   color: black;
   position: relative;
   height: 200px;
+  border-radius: 5px;
 }
 
 .contact-content .site-form {
@@ -221,16 +223,16 @@ hr.style2, .style1 {
   background: white;
   position: absolute;
   bottom: 0px;
-  right: 0px;
+  right: 20px;
 }
 
-.site-form input, .site-form textarea {
+.site-form input, .site-form textarea{
     display: block;
     margin: 10px 0;
     padding: 10px 0;
 }
 
-.site-form button[type="submit"] {
+.site-form button[type="submit"]{
     background: #000000;
     opacity: 0.7;
     border: 0;
@@ -241,7 +243,7 @@ hr.style2, .style1 {
     padding: 5px;
 }
 
-.site-form button[type="submit"]:hover {
+.site-form button[type="submit"]:hover{
     opacity: .5;
     cursor: pointer;
 }
