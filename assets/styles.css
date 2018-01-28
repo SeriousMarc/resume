@@ -177,3 +177,71 @@ hr.style2, .style1 {
 .experience-content h1{
   padding-bottom: 20px
 }
+
+/* portfilio styling */
+.portfolio-content {
+  margin: auto;
+}
+
+.portfolio-content .projects .project {
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 10px 50px;
+  background: rgba(0,0,0, 0.4);
+}
+
+.portfolio-content h1 {
+  padding-bottom: 20px;
+}
+
+/* contact styling */
+
+.contact-content {
+  display: grid;
+  grid-template-rows: 400px 1fr;
+  position: relative;
+}
+
+.contact-content .contact-top-block {
+  background: url(bg.jpg);
+  background-size: cover;
+}
+
+.contact-content .contact-bot-block {
+  background: white;
+  color: black;
+  position: relative;
+  height: 200px;
+}
+
+.contact-content .site-form {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px 50px;
+  background: white;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.site-form input, .site-form textarea {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.site-form button[type="submit"] {
+    background: #000000;
+    opacity: 0.7;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.site-form button[type="submit"]:hover {
+    opacity: .5;
+    cursor: pointer;
+}

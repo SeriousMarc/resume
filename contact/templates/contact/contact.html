@@ -1,15 +1,17 @@
 {% extends 'base_layout.html'%}
 {% block content %}
-  <div class="content-contact">
-    <h1>contact me</h1>
-    <div class="site-form">
-      <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div class="form-actions">
-          <button type="submit">Send</button>
-        </div>
-      </form>
+  <div class="contact-content">
+    <div class="contact-top-block"><img src="" alt=""></div> 
+    <div class="contact-bot-block">
+      <div class="site-form">
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <div class="form-actions">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 {% endblock %}
