@@ -12,6 +12,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  border-bottom: 1px solid white;
 }
 
 h1, h2, h3 {
@@ -28,7 +29,7 @@ h3 {font-size: 1em;}
 body {
   display: grid;
   grid-template-columns: minmax(760px, auto);
-  grid-template-rows: 80px minmax(500px, auto) 80px;
+  grid-template-rows: 1fr minmax(500px, auto) 1fr;
   grid-gap: 50px;
   margin-top: 70px;
   color: white;
@@ -37,21 +38,28 @@ body {
 body .content {
   display: grid;
   grid-template-rows: minmax(500px, auto);
-  justify-self: center;
 }
 
-header, footer {
+header, main, footer {
   display: grid;
-  background: rgba(0,0,0, 0.5);
 }
 
 header, footer{
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
+  background: rgba(0,0,0, 0.5);
+}
+
+header h1 {
+  margin: auto 0;
+  padding: 10px;
+}
+header h1 a img {
+  height: 70px;
 }
 
 header .main-nav {
-  justify-self: end;
-  margin: auto;
+  justify-self: start;
+  margin: auto 0;
 }
 
 header .main-nav li {
@@ -78,6 +86,10 @@ main {
   margin: auto;
 }
 
+footer {
+
+}
+
 footer .footer-creator{
   justify-self: center;
   margin: auto;
@@ -86,7 +98,7 @@ footer .footer-creator{
 footer .footer-creator li {
   display: inline-block;
   left: 10px;
-  padding: 10px;
+  padding: 20px;
 }
 
 footer .footer-creator li a {
@@ -101,14 +113,13 @@ footer .footer-nav {
 
 footer .footer-nav li {
   display: inline-block;
-  position: relative;
-  right: 50px;
   padding: 10px;
+  position: relative;
 }
 
-footer .footer-nav li a {
-  text-decoration: none;
-  color: white;
+footer .footer-nav li a img {
+  height: 30px;
+  border-radius: 5px;
 }
 
 /* homepage styling */
@@ -213,7 +224,8 @@ hr.style2, .style1 {
   color: black;
   position: relative;
   height: 200px;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .contact-content .site-form {
@@ -226,13 +238,18 @@ hr.style2, .style1 {
   right: 20px;
 }
 
-.site-form input, .site-form textarea{
+.contact-content .site-form p {
+    text-align: left;
+}
+
+.site-form input, .site-form textarea {
     display: block;
     margin: 10px 0;
     padding: 10px 0;
+    width: 100%;
 }
 
-.site-form button[type="submit"]{
+.site-form button[type="submit"] {
     background: #000000;
     opacity: 0.7;
     border: 0;
@@ -241,9 +258,27 @@ hr.style2, .style1 {
     border-radius: 4px;
     margin: 10px 0;
     padding: 5px;
+    position: relative;
+    display: inline-block;
+    left: 250px;
 }
 
-.site-form button[type="submit"]:hover{
+.site-form button[type="submit"]:hover {
     opacity: .5;
     cursor: pointer;
+}
+
+.contact-bot-block .contact-info {
+  position: absolute;
+  left: 50px;
+  top: 40px;
+}
+
+.contact-bot-block .contact-info h3{
+  padding: 0px 0px 10px 0px;
+  display: inline-block
+}
+
+.contact-bot-block .contact-info p{
+  text-align: left
 }

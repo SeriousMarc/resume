@@ -1,8 +1,14 @@
 {% extends 'base_layout.html'%}
 {% block content %}
   <div class="contact-content">
-    <div class="contact-top-block"><img src="" alt=""></div> 
+    <div class="contact-top-block"><img src="" alt=""></div>
     <div class="contact-bot-block">
+      <div class="contact-info">
+        <h3>Mark Morozov</h3>
+        <p>Kharkiv, Ukraine</p>
+        <p>medivhbox@gmail.com</p>
+        <p>Tel: +38 068 109 2590</p>
+      </div>
       <div class="site-form">
         <form method="post">
           {% csrf_token %}

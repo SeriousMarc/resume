@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <h1>Test this my first project</h1>
+      <h1><a href="{% url 'home' %}"><img src="{% static 'logo2.png' %}" alt="resume" /></a></h1>
       <nav class="main-nav">
         <ul>
           <li><a href="{% url 'home' %}">Home</a></li>
@@ -34,8 +34,8 @@
       </div>
       <div class="footer-nav">
         <ul>
-          <li><a href="#"><img src="" alt="" />IMAGE1</a></li>
-          <li><a href="#"><img src="" alt="" />IMAGE2</a></li>
+          <li><a href="https://www.linkedin.com/in/mark-morozov/" ><img src="{% static 'nav-logo-linkedin.png' %}" alt="" /></a></li>
+          <li><a href="https://github.com/SeriousMarc"><img src="{% static 'nav-logo-git.png' %}" alt="" /></a></li>
         </ul>
       </div>
     </footer>
