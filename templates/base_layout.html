@@ -8,16 +8,18 @@
   </head>
   <body>
     <header>
-      <h1><a href="{% url 'home' %}"><img src="{% static 'logo2.png' %}" alt="resume" /></a></h1>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'skills:skills_home' %}">Skills</a></li>
-          <li><a href="{% url 'experience:experience_home' %}">Experience</a></li>
-          <li><a href="{% url 'portfolio:portfolio_home' %}">Portfolio</a></li>
-          <li><a href="{% url 'contact:contact_home' %}">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="header">
+        <h1><a href="{% url 'home' %}"><img src="{% static 'logo2.png' %}" alt="resume" /></a></h1>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'skills:skills_home' %}">Skills</a></li>
+            <li><a href="{% url 'experience:experience_home' %}">Experience</a></li>
+            <li><a href="{% url 'portfolio:portfolio_home' %}">Portfolio</a></li>
+            <li><a href="{% url 'contact:contact_home' %}">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <div class="content">
@@ -26,17 +28,20 @@
       </div>
     </main>
     <footer>
-      <div class="footer-creator">
-        <ul>
-          <li><p>Created by Mark Morozov</p></li>
-          <li><p><a href="{% url 'contact:contact_home' %}">Contact</a></p></li>
-        </ul>
-      </div>
-      <div class="footer-nav">
-        <ul>
-          <li><a href="https://www.linkedin.com/in/mark-morozov/" ><img src="{% static 'nav-logo-linkedin.png' %}" alt="" /></a></li>
-          <li><a href="https://github.com/SeriousMarc"><img src="{% static 'nav-logo-git.png' %}" alt="" /></a></li>
-        </ul>
+      <div class="footer">
+        <div class="footer-creator">
+          <p><a href="{% url 'home' %}"><img src="{% static 'logo3.png' %}" alt="resume" /></a></p>
+          <ul>
+            <li><p>© 2018 by Mark Morozov.</p></li>
+            <li><p><a href="{% url 'contact:contact_home' %}">Contact</a></p></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="https://www.linkedin.com/in/mark-morozov/" target="_blank"><img src="{% static 'nav-logo-linkedin.png' %}" alt="" /></a></li>
+            <li><a href="https://github.com/SeriousMarc" target="_blank"><img src="{% static 'nav-logo-git.png' %}" alt="" /></a></li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>

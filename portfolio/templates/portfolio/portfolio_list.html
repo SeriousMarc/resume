@@ -1,11 +1,11 @@
 {% extends 'base_layout.html'%}
 {% block content %}
     <div class="portfolio-content">
-      <h1>My Portfolio</h1>
+      <h1>My projects</h1>
       <div class="projects">
         {% for project in projects %}
         <div class="project">
-          <img src="{{project.img.url}}" />
+          <a href="{% url 'home' %}"><img src="{{project.img.url}}" /></a>
           <p>{{project.url_name}}</p>
           <p>{{project.description}}</p>
         </div>
