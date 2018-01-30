@@ -5,8 +5,7 @@
       <div class="projects">
         {% for project in projects %}
         <div class="project">
-          <a href="{% url 'home' %}"><img src="{{project.img.url}}" /></a>
-          <p>{{project.url_name}}</p>
+          <a href="{{project.url_name}}" target="_blank"><img src="{{project.img.url}}" /></a>
           <p>{{project.description}}</p>
         </div>
         {% endfor %}
