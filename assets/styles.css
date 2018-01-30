@@ -12,7 +12,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  border-bottom: 1px solid white;
+  height: 100%;
 }
 
 h1, h2, h3 {
@@ -28,22 +28,13 @@ h2 {font-size: 1.4em;}
 h3 {font-size: 1em;}
 
 body {
+  min-height: 100%;
   display: grid;
   grid-template-columns: minmax(760px, auto);
-  grid-template-rows: 1fr minmax(500px, auto) 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-gap: 50px;
-  margin-top: 70px;
   color: white;
-}
-
-body .content {
-  display: grid;
-  grid-template-rows: minmax(500px, auto);
-}
-
-header, main, footer {
-  display: grid;
-  grid-template-columns: minmax(760px, auto);
+  margin-top:50px;
 }
 
 header, footer {
@@ -89,10 +80,13 @@ header .main-nav li a:hover {
 
 main {
   width: 760px;
-  min-height: 100%;
   margin: auto;
+  padding: 10px;
 }
 
+footer {
+  border-bottom: 1px solid white;
+}
 .footer{
   display: grid;
   grid-template-columns: 60% 1fr;
@@ -103,7 +97,6 @@ footer .footer-creator{
   display: grid;
   grid-template-columns: 20% 1fr;
   font-size: 0.8em;
-
   justify-self: start;
 }
 
@@ -160,7 +153,7 @@ hr.style2 {
 
 /* skills styling */
 .skills-content {
-  margin: auto;
+/*   margin: auto; */
 }
 .skills-content .skills {
   display: grid;
@@ -193,7 +186,7 @@ hr.style2 {
 
 /* experience styling */
 .experience-content {
-  margin: auto;
+/*   margin: auto; */
 }
 
 .experience-content .activities {
@@ -218,7 +211,13 @@ hr.style2 {
 
 /* portfilio styling */
 .portfolio-content {
-  margin: auto;
+/*   margin: auto; */
+}
+
+.portfolio-content .projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 50px;
 }
 
 .portfolio-content .projects .project {
@@ -226,6 +225,7 @@ hr.style2 {
   border-radius: 5px;
   padding: 10px 50px;
   background: rgba(150,133,153, 0.5);
+  margin: auto;
 }
 
 .portfolio-content .projects .project:hover {
