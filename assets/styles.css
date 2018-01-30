@@ -7,7 +7,7 @@
 }
 
 html {
-  background: url(46265.jpg) no-repeat center center fixed;
+  background: url(bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -254,7 +254,7 @@ hr.style2 {
 }
 
 .contact-content .contact-top-block {
-  background: url(46265.jpg);
+  background: url(bg.jpg);
   background-size: cover;
   border-radius: 5px;
 }
