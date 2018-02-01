@@ -16,5 +16,8 @@ def contact(request):
                 send_mail(subject, message, from_email, ['medivhbox@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return HttpResponse('Success')
+            return redirect('contact:contact_success')
     return render(request, 'contact/contact.html', {'form':form})
+
+def success(request):
+    return render(request, 'contact/success.html')

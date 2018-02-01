@@ -35,6 +35,7 @@ body {
   grid-gap: 50px;
   color: white;
   margin-top:50px;
+  overflow-x:hidden;
 }
 
 header, footer {
@@ -82,6 +83,23 @@ main {
   width: 760px;
   margin: auto;
   padding: 10px;
+}
+
+.content {
+	position: relative;
+	left: 0;
+	-webkit-animation: mymove 5s infinite;
+	animation: mymove 1.5s 1;
+}
+
+@-webkit-keyframes mymove {
+  0% {left: 500px;}
+  50% {left: 0;}
+}
+
+@keyframes mymove {
+  0% {left: 500px;}
+  50% {left: 0;}
 }
 
 footer {
@@ -135,6 +153,9 @@ footer .footer-nav li a img {
 }
 
 /* homepage styling */
+.content {
+	margin-top: 50px;
+}
 body .content .homepage-content {
   margin: auto;
   font-size: 20px;
@@ -149,6 +170,30 @@ hr.style1 {
 hr.style2 {
 	border-top: 1px double gold;
   margin: 0 20px;
+}
+
+.buttonDownload {
+	display: block;
+	padding: 10px 20px;
+	width: 140px;
+	background-color: #1a5567;
+	color: white;
+	margin: 50px auto;
+
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 0.9em;
+	text-align: center;
+	text-indent: 5px;
+	opacity: 0.8;
+	border-radius: 5px;
+}
+
+.buttonDownload:hover {
+	background-color: #6d7993;
+	color: white;
+	opacity: 1;
+	box-shadow: 0 0 10px rgba(255,255,255,0.5);
 }
 
 /* skills styling */
@@ -271,7 +316,7 @@ hr.style2 {
 .contact-content .site-form {
   border: 1px solid white;
   border-radius: 5px;
-  padding: 10px 50px;
+  padding: 20px;
   background: white;
   position: absolute;
   bottom: 0px;
@@ -280,13 +325,15 @@ hr.style2 {
 
 .contact-content .site-form p {
     text-align: left;
+    padding: 5px 15px;
 }
 
 .site-form input, .site-form textarea {
     display: block;
     margin: 10px 0;
-    padding: 10px 0;
+    padding: 5px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .site-form button[type="submit"] {
@@ -300,7 +347,7 @@ hr.style2 {
     padding: 5px;
     position: relative;
     display: inline-block;
-    left: 250px;
+    left: 260px;
 }
 
 .site-form button[type="submit"]:hover {
@@ -322,4 +369,17 @@ hr.style2 {
 .contact-bot-block .contact-info p{
   text-align: left
 }
-/* hello */
+
+.site-form {
+	background: black;
+}
+.site-form .success a {
+	display: block;
+	position: relative;
+	bottom: 70px;
+	right: 100px;
+	margin: auto;
+	color: #2f3c5e;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
