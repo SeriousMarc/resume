@@ -12,6 +12,7 @@ def contact(request):
             subject = form.cleaned_data['subject']
             from_email = form.cleaned_data['from_email']
             message = form.cleaned_data['message']
+            message += ' from: ' + from_email
             try:
                 send_mail(subject, message, from_email, ['medivhbox@gmail.com'], fail_silently=True)
             except BadHeaderError:
